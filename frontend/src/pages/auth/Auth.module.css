@@ -1,0 +1,62 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1080px;
+  padding-top: 40px;
+  gap: 0;
+}
+.brandPanel {
+  position: relative;
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+  overflow: hidden;
+  background: var(--black);
+  color: var(--white);
+  min-height: 560px;
+}
+.brandPanel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+.brandContent {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.9));
+}
+.brandContent h2 { font-size: 2.2rem; margin: 18px 0; line-height: 1.1; }
+.brandContent em { font-style: normal; color: var(--orange-500); }
+.brandContent ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; color: var(--gray-300); }
+.brandContent li { display: flex; align-items: center; gap: 10px; }
+.brandContent li svg { color: var(--orange-500); }
+
+.formPanel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 0;
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  padding: clamp(28px, 5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.formPanel h1 { font-size: 1.9rem; margin-bottom: 6px; }
+.subtitle { color: var(--gray-600); margin-bottom: 26px; }
+.subtitle a, .alt a { color: var(--orange-600); font-weight: 700; }
+.form { display: flex; flex-direction: column; gap: 16px; }
+.row { display: flex; justify-content: space-between; align-items: center; font-size: 0.86rem; }
+.row a { color: var(--orange-600); font-weight: 600; }
+.alt { text-align: center; color: var(--gray-600); font-size: 0.9rem; margin-top: 10px; }
+.pwWrap { position: relative; }
+.pwToggle {
+  position: absolute; right: 8px; top: 33px;
+  background: none; border: 0; padding: 6px; color: var(--gray-500);
+}
+.pwToggle:hover { color: var(--black); }
+.success { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 20px 0; }
+.success svg { color: var(--success); }
+
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: 1fr; padding-top: 16px; }
+  .brandPanel { display: none; }
+  .formPanel { border-left: 1px solid var(--border); border-radius: var(--radius-xl); }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" width="520" height="128" role="img" aria-label="Sanka Music">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A24"/><stop offset="1" stop-color="#E85A00"/></linearGradient></defs>
+  <path d="M60 4C95 4 116 18 114 44C112 74 82 108 60 124C38 108 8 74 6 44C4 18 25 4 60 4Z" fill="url(#g)"/>
+  <path d="M80 36C70 26 44 26 41 41C38 56 79 52 79 70C79 88 50 92 38 80" fill="none" stroke="#111" stroke-width="11" stroke-linecap="round"/>
+  <rect x="88" y="62" width="6" height="16" rx="3" fill="#111"/><rect x="26" y="44" width="6" height="16" rx="3" fill="#111"/>
+  <text x="138" y="76" font-family="Sora, 'Segoe UI', Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="1" fill="#FFFFFF">SANKA</text>
+  <text x="141" y="110" font-family="Sora, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="17" fill="#FF6A00">MUSIC</text>
+</svg>

@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest>=8.0
+httpx>=0.27          # usado pelo TestClient do FastAPI
+mongomock>=4.1       # MongoDB em memória para testes

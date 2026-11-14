@@ -1,0 +1,37 @@
+.wrap { display: grid; grid-template-columns: 270px 1fr; gap: 28px; align-items: start; }
+.side {
+  position: sticky;
+  top: 150px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.hello { display: flex; align-items: center; gap: 12px; padding: 20px; background: var(--black); color: var(--white); }
+.hello small { display: block; color: var(--gray-400); font-size: 0.75rem; }
+.hello b { font-family: var(--font-display); font-size: 0.98rem; }
+.avatar {
+  width: 46px; height: 46px; border-radius: 14px;
+  display: grid; place-items: center;
+  background: var(--brand-gradient);
+  font-family: var(--font-display); font-weight: 800; font-size: 1.2rem;
+}
+.nav { display: flex; flex-direction: column; padding: 8px; }
+.nav a, .nav button {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border-radius: var(--radius-sm);
+  background: none; border: 0; text-align: left;
+  font-weight: 500; color: var(--gray-700);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.nav a:hover, .nav button:hover { background: var(--gray-100); color: var(--black); }
+.nav .active { background: var(--orange-50); color: var(--orange-700); font-weight: 700; }
+.content { min-width: 0; }
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; gap: 16px; }
+  .side { position: static; }
+  .hello { display: none; }
+  .nav { flex-direction: row; overflow-x: auto; gap: 4px; scrollbar-width: none; }
+  .nav a, .nav button { white-space: nowrap; padding: 10px 12px; font-size: 0.88rem; }
+}

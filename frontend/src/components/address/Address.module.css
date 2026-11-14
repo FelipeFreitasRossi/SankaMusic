@@ -1,0 +1,30 @@
+.form { display: flex; flex-direction: column; gap: 18px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.span2 { grid-column: span 2; }
+.actions { display: flex; justify-content: flex-end; gap: 10px; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+  background: var(--white);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast), transform var(--t-fast);
+}
+.selectable:hover { border-color: var(--orange-200); }
+.selected { border-color: var(--orange-500); box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.12); background: var(--orange-50); }
+.cardHead { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.label { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 0.86rem; }
+.label svg { color: var(--orange-500); }
+.text { font-style: normal; display: flex; flex-direction: column; gap: 2px; font-size: 0.9rem; color: var(--gray-700); line-height: 1.45; }
+.text b { color: var(--black); }
+.cardActions { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .span2 { grid-column: 1 / -1; }
+}

@@ -1,0 +1,46 @@
+.stack { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.panel { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.panel h2 { font-size: 1.08rem; margin: 0; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.actions { display: flex; justify-content: flex-end; }
+.headRow { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.addressGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.back { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.88rem; color: var(--gray-600); }
+.back:hover { color: var(--orange-600); }
+
+.orderList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.orderRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto 20px;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  transition: border-color var(--t-fast), box-shadow var(--t);
+}
+.orderRow:hover { border-color: var(--orange-200); box-shadow: var(--shadow-md); }
+.orderThumbs { display: flex; }
+.orderThumbs img { width: 52px; height: 52px; border-radius: 12px; object-fit: cover; border: 3px solid var(--white); background: var(--gray-100); }
+.orderThumbs img + img { margin-left: -18px; }
+.orderMeta { display: flex; flex-direction: column; }
+.orderMeta small { color: var(--gray-500); }
+.orderTotal { font-family: var(--font-display); font-size: 1.05rem; }
+.chev { color: var(--gray-400); }
+
+.tracking { display: flex; align-items: center; gap: 8px; margin: 0; padding: 12px 14px; border-radius: var(--radius-md); background: var(--info-bg); color: #1f4fa8; font-size: 0.9rem; }
+.payBox { flex-direction: row; justify-content: space-between; align-items: center; border-color: var(--orange-200); background: var(--orange-50); }
+.payBox p { margin: 4px 0 0; }
+.payActions { display: flex; gap: 8px; flex-wrap: wrap; }
+.detailGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: start; }
+
+@media (max-width: 900px) {
+  .detailGrid { grid-template-columns: 1fr; }
+  .payBox { flex-direction: column; align-items: stretch; }
+}
+@media (max-width: 640px) {
+  .grid2, .grid3 { grid-template-columns: 1fr; }
+  .panel { padding: 18px; }
+  .orderRow { grid-template-columns: 1fr auto; gap: 10px 12px; padding: 14px; }
+  .orderThumbs { display: none; }
+  .chev { display: none; }
+}
